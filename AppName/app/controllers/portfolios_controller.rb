@@ -9,10 +9,11 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:tititle, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:tititle, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -55,5 +56,5 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
     end
   end
- end
+  end
 end
