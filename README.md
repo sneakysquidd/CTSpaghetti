@@ -37,5 +37,9 @@ rails s -b $IP -p $PORT
 For more information on how to use Cloud9, visit http://docs.c9.io for our documentation. If you want, you can also go watch some training videos at
 http://www.youtube.com/user/c9ide.
 
+<<<<<<< HEAD
 Good luck with the coding!
 
+=======
+Good luck with the coding!
+>>>>>>> 920aeb2e7baf53c57d6b228937383db9e9ea5c07
