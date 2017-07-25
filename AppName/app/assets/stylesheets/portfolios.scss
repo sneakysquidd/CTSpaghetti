@@ -63,3 +63,9 @@ footer p {
 .portfolio-form {
   padding: 20px;
 }
+
+
+.slow-spin {
+  -webkit-animation: fa-spin 8s infinite linear;
+  animation: fa-spin 8s infinite linear;
+}

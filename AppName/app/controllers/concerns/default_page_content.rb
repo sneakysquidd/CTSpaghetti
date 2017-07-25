@@ -6,7 +6,7 @@ module DefaultPageContent
   end
   
   def set_title
-    @page_title = "Devacmpt Portfolio | Gavin's Portfolio"
+    @page_title = "Gavin Thomas Portfolio"
     @seo_keywords = "Gavin's Portfolio"
   end
 end
