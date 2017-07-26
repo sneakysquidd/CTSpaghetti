@@ -20,6 +20,7 @@ module ApplicationHelper
     ThomasViewTool::Renderer.copyright 'Gavin Thomas', 'All rights reserved'
   end
 
+
   def nav_items
     [
       {
