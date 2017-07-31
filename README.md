@@ -31,7 +31,7 @@ rails db:create && rails db:migrate
 To run the Rails server on C9, the command is:
 
 ```
-rails s -b $IP -p $PORT   <---- JUST PUSH ALT+R (MACRO)
+rails s -b $IP -p $PORT
 ```
 
 
