@@ -1,10 +1,38 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1 class="jumbotron-heading">My Portfolio</h1>
-    <p class="lead text-muted">test test</p>
+    <p class="lead text-muted">My name is Gavin Thomas and here is a portfolio of the things I have created</p>
+    
     <p>
-      <%= link_to 'Find Out More About Me', about_me_path, class: 'btn btn-primary' %>
-      <%= link_to 'My Blog', blogs_path, class: 'btn btn-success' %>
+      <%= link_to 'Find out more about me', root_path, class: 'btn btn---border btn---primary btn---animated' %>
+      <%= link_to 'My Blog', blogs_path, class: 'btn btn--border btn--primary btn--animated' %>
     </p>
+    
+    
+    
+          <!-- Return to Top -->
+            <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></i></a>
+      
+      
+            <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+            <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+          </p>
+        </div>
+      </section>
+      
+      <script>
+        $(window).scroll(function() {
+          if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+              $('#return-to-top').fadeIn(200);    // Fade in the arrow
+          } else {
+              $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+          }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });
+      </script>
   </div>
 </section>

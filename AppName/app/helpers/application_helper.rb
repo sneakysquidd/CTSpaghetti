@@ -24,15 +24,15 @@ module ApplicationHelper
   def nav_items
     [
       {
-        url: root_path,
+        url: root_path(anchor: 'top'),
         title: 'Home'
       },
       {
-        url: about_me_path,
-        title: 'About Me'
+       url: root_path(anchor: 'about_me_path'),
+       title: 'About Me'
       },
       {
-        url: contact_path,
+        url: root_path(anchor: 'contact_path'),
         title: 'Contact'
       },
       {
@@ -75,5 +75,9 @@ module ApplicationHelper
   
   def alert_generator msg
     js add_gritter(msg, :title => "Gavin Thomas Portfolio", sticky: false)
+  end
+  
+  def app_nav_helper
+    
   end
 end

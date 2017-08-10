@@ -1,11 +1,240 @@
-<div class="inner cover">
-  <h1 class="cover-heading">Hello.</h1>
-  <p class="lead">Software development should not be a secret process, when I take on a new project I make it my goal to not only deliver a well crafted product but to also ensure that each stage of the process is fully communicated.</p>
-  <p class="lead">
-    <%= link_to "About Me", about_me_path, class: "btn btn-lg btn-secondary" %>
-  </p>
-</div>
+<div class="KW_progressContainer">
+		<div class="KW_progressBar">
+
+		</div>
+	</div>
+
+<div class="home-page" id="top">
+     
+      <div class="animate-home">
+        <span class="animate">welcome
+          <a href="#about_me_path">
+          <span class="buttcheek">
+            <div class="basicBox">
+              About Me
+              <svg width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                <rect x='0' y='0' fill='none' width='130' height='65'/>
+              </svg>
+            </div>
+          </span>
+          </a>
+          <a href="#contact_path">
+          <span class="butt">
+            <div class="basicBox">
+              Contact
+              <svg width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                <rect x='0' y='0' fill='none' width='130' height='65'/>
+              </svg>
+            </div>
+          </span>
+          </a>
+        </span>
+        
+      </div>
+    
       
+  <div class ="home-content">
+  <div class="home-about" id="about">  
+  <div class="app-card-container">
+  <div class="card">
+    <div class="about-me">
+    <h1 id="about_me_path">About Me</h1>
+    </div>
+    <hr>
+    <hr>
 
 
-   
+  <!-- About Me Content -->
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.png", width: 300, alt: "profile image", class: 'profile-img' %>
+      </div>
+
+      <div class="col-md-8">
+        <p>With less than a decade of development experience in a single industry I realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in a final product that fails to reach the goal sought by the customer and end user.</p>
+
+        <p>
+
+          
+          <button
+            class="btn6"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn6"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Student
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              Corner Canyon High School
+            </div>
+<!--            <div class="card card-block">
+              School 3
+            </div> -->
+        </p>
+      </div>
+    </div>    
+  </div>
+</div>
+</div>
+
+  <!-- Contact Content -->
+   <div class="home-contact" id="contact_path">
+    <div class="app-card-container">
+  <div class="card">
+    <h1>Would you like to contact me?</h1>
+    
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-6">
+       <div class="about-design">
+         <h3>Home Town</h3>
+    
+       <p>Draper, Utah</p>
+    
+       <h3>Phone</h3>
+    
+       <p><%= number_to_phone "8017012029" %></p>
+      
+       <button class="button" onclick="go()"><span>Email Me </span></button>
+       </div>
+      
+    </div>
+    
+    <!-- Google Maps URL -->
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/place/Draper,+UT/@40.4934495,-111.9225059,12z/data=!3m1!4b1!4m5!3m4!1s0x8752805153135f0f:0xea3aa3af26cf70b2!8m2!3d40.5246711!4d-111.8638226" width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+ </div>
+ <div class="app-footer">
+ <%= copyright_generator %> 
+ </div>
+</div>
+        
+          </p>
+        </div>
+        <footer> 
+        <!-- Back To Top Button -->
+          <a href="#" class="top">&uarr;</a>
+        </footer>
+      </section>
+      
+</div>
+</div>
+
+
+<!-- Section Scroll Script -->
+<script>
+    // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+</script>
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+<!-- Email Script -->
+<script>
+  function go(){
+    window.open("mailto:emailgavinthomas@gmail.com?subject=PortfolioContact");
+  }
+</script>
+
+
+<!-- Back To Top Script -->
+<script>
+  $(document).ready(function() {
+    var offset=250, // At what pixels show Back to Top Button
+    scrollDuration=300; // Duration of scrolling to top
+        $(window).scroll(function() {
+	    if ($(this).scrollTop() > offset) {
+                $('.top').fadeIn(1000); // Time(in Milliseconds) of appearing of the Button when scrolling down.
+                } else {
+		$('.top').fadeOut(500); // Time(in Milliseconds) of disappearing of Button when scrolling up.
+		}
+	});
+
+	// Smooth animation when scrolling
+	$('.top').click(function(event) {
+	event.preventDefault();
+            $('html, body').animate({
+	        scrollTop: 0}, scrollDuration);
+                })
+	});
+</script>
+
+
+<!-- Scroll Progress Script -->
+<script>
+  $(window).load(function(){
+  $(window).scroll(function() {
+    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+    console.log(wintop);
+    var totalScroll = (wintop/(docheight-winheight))*100;
+    console.log("total scroll" + totalScroll);
+    $(".KW_progressBar").css("width",totalScroll+"%");
+  });
+
+});
+</script
